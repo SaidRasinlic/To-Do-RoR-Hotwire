@@ -8,12 +8,23 @@ class TasksController < ApplicationController
     @task = Task.new(task_params)
 
     respond_to do |format|
-      if @task.save
-        format.html { redirect_to tasks_url, notice: 'Task was successfully created' }
-      else
-        format.html { render :new, status: :unprocessable_entity }
+      format.html do
+        if @task.save
+          flash[:success] = "Post saved successfully."
+          redirect_to tasks_url
+        else
+          flash[:error] = @task.errors.full_messages.to_sentence
+          render :new
+        end
       end
     end
+  end
+
+  def toggle
+    @task = Task.find(params[:id])
+    @task.update(completed: params[:completed])
+
+    render json: { message: "Success" }
   end
 
   private
