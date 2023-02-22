@@ -10,7 +10,7 @@ class TasksController < ApplicationController
     respond_to do |format|
       format.html do
         if @task.save
-          flash[:success] = "Post saved successfully."
+          flash[:success] = 'Post saved successfully.'
           redirect_to tasks_url
         else
           flash[:error] = @task.errors.full_messages.to_sentence
@@ -24,7 +24,7 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
     @task.update(completed: params[:completed])
 
-    render json: { message: "Success" }
+    render json: { message: 'Success' }
   end
 
   private
