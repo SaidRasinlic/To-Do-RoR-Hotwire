@@ -36,7 +36,7 @@ To get a local copy up and running follow these simple example steps.
 
 - **Clone this [repo](https://github.com/SaidRasinlic/To-Do-RoR-Hotwire)**
 - Navigate to the correct directory **cd To-Do-RoR-Hotwire** (case sensitive)
-- Setup database configuration in [./config/database.yml](./app/config/database.yml) and use your correct username and password to access PostgreSQL database
+- Setup database configuration in [./app/config/database.yml](./config/database.yml) and use your correct username and password to access PostgreSQL database
 - In your terminal run the following two commands:
   - `bundle install`
   - `yarn install`
