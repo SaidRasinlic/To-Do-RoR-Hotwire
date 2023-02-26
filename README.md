@@ -1,47 +1,53 @@
-# Law-Firm
+# To-Do-RoR-Hotwire
+This is a RoR + Hotwire To-Do List project with basic CRUD operations. The main goal of this application is to understand how Hotwire front-end frameworks (it’s a suite of different frameworks) works. This application also represents traditional web architecture (server-rendered HTML), without the complexity of modern JavaScript frameworks like React.
 
 To be added
 
 ## Live Demo
 
-To be added
+N/A
 
 <!-- ### <p align="center"><a href="https://saidrasinlic.github.io/Law-Firm/">Live Demo</a></p> -->
 
 
 ## Screenshot
-<p align="center"><img src="/Project-Snap.png" alt="Desktop Snapshot" />
+<p align="center"><img src="./app/assets/images/Project-Snapshot.png" alt="Project Snapshot" />
 
 
 ## Built With
 
-To be added
-<!-- - React (front-end)
-- Node (back-end)
-- MySQL (database)
-- SCSS, CSS
-- Linters (eslint, stylelint)
-- VSCode
-- Git Bash
-- GitHub -->
+- RoR
+- Hotwire
+- Tailwind CSS
+- PostgreSQL
 
 ## Getting Started
 
-To be added
+To get a local copy up and running follow these simple example steps.
 
 
 ### Prerequisites
 
-To be added
-<!-- - Laptop or Desktop
+- Laptop or Desktop
 - Web Browser
-- Node & MySQL (installed and set up)
+- Ruby on Rails & PostgreSQL (installed and set up)
 - IDE (preferably Visual Studio Code)
-- Programming Knowledge -->
+- Programming Knowledge
 
 ### Installation, Setup and Usage
 
-To be added
+- **Clone this [repo](https://github.com/SaidRasinlic/To-Do-RoR-Hotwire)**
+- Navigate to the correct directory **cd To-Do-RoR-Hotwire** (case sensitive)
+- Run **bundle install** in your terminal
+- Setup database configuration in config/database.yml and use your correct username and password to access PostgreSQL db
+- In your terminal run the following two commands:
+  - `rails db:create`
+  - `rails db:migrate`
+  - `yarn install`
+  - `rails tailwindcss:build`
+- Type **rails s** in your terminal to start the server.
+- Enter **http://localhost:3000/ or localhost:3000** on your browser to view page
+- **Congratulations! App should run successfully.**
 
 ## Author
 
