@@ -20,6 +20,33 @@ class TasksController < ApplicationController
     end
   end
 
+  def edit
+    @task = Task.find(params[:id])
+  end
+
+  def update
+    @task = Task.find(params[:id])
+
+    respond_to do |format|
+      format.html do
+        if @task.update(task_params)
+          flash[:success] = 'Task was successfully updated'
+          redirect_to tasks_url
+        else
+          flash[:error] = @task.errors.full_messages.to_sentence
+          render :edit
+        end
+      end
+    end
+  end
+
+  def destroy
+    @task = Task.find(params[:id])
+    @task.destroy
+    flash[:success] = 'Task was successfully deleted'
+    redirect_to tasks_url
+  end
+
   def toggle
     @task = Task.find(params[:id])
     @task.update(completed: params[:completed])
