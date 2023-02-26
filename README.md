@@ -36,15 +36,14 @@ To get a local copy up and running follow these simple example steps.
 
 - **Clone this [repo](https://github.com/SaidRasinlic/To-Do-RoR-Hotwire)**
 - Navigate to the correct directory **cd To-Do-RoR-Hotwire** (case sensitive)
-- Setup database configuration in [./app/config/database.yml](./app/config/database.yml) and use your correct username and password to access PostgreSQL database
+- Setup database configuration in [./config/database.yml](./app/config/database.yml) and use your correct username and password to access PostgreSQL database
 - In your terminal run the following two commands:
   - `bundle install`
   - `yarn install`
-  - `rails tailwindcss:install`
   - `rails tailwindcss:build`
   - `rails db:create`
   - `rails db:migrate`
-- Run `rals s` in your terminal to start the server.
+  - `rails s` in your terminal to start the server.
 - Enter **http://localhost:3000/ or localhost:3000** on your browser to view page
 - **Congratulations! App should run successfully.**
 
