@@ -43,7 +43,8 @@ class TasksController < ApplicationController
   def destroy
     @task = Task.find(params[:id])
     @task.destroy
-    redirect_to tasks_url, success: "Post was successfully deleted."
+    flash[:success] = "Task was successfully deleted"
+    redirect_to tasks_url
   end
 
   def toggle
