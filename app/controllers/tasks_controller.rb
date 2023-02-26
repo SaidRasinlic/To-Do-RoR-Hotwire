@@ -10,7 +10,7 @@ class TasksController < ApplicationController
     respond_to do |format|
       format.html do
         if @task.save
-          flash[:success] = 'Post saved successfully.'
+          flash[:success] = "Post saved successfully."
           redirect_to tasks_url
         else
           flash[:error] = @task.errors.full_messages.to_sentence
@@ -20,11 +20,37 @@ class TasksController < ApplicationController
     end
   end
 
+  def edit
+    @task = Task.find(params[:id])
+  end
+
+  def update
+    @task = Task.find(params[:id])
+
+    respond_to do |format|
+      format.html do
+        if @task.update(task_params)
+          flash[:success] = "Task was successfully updated"
+          redirect_to tasks_url
+        else
+          flash[:error] = @task.errors.full_messages.to_sentence
+          render :edit
+        end
+      end
+    end
+  end
+
+  def destroy
+    @task = Task.find(params[:id])
+    @task.destroy
+    redirect_to tasks_url, success: "Post was successfully deleted."
+  end
+
   def toggle
     @task = Task.find(params[:id])
     @task.update(completed: params[:completed])
 
-    render json: { message: 'Success' }
+    render json: { message: "Success" }
   end
 
   private
