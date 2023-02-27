@@ -43,9 +43,9 @@ To get a local copy up and running follow these simple example steps.
   - `rails tailwindcss:build`
   - `rails db:create`
   - `rails db:migrate`
-  - `rails s` in your terminal to start the server.
-- Enter **http://localhost:3000/ or localhost:3000** on your browser to view page
-- **Congratulations! App should run successfully.**
+- Run `rails s` to start your server and enter `http://localhost:3000/` or `localhost:3000` on your browser to run the app locally
+
+**<p align="center">Congratulations! App should run successfully!</p>**
 
 ## Author
 
