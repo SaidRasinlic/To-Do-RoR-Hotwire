@@ -1,5 +1,5 @@
 # To-Do-RoR-Hotwire
-This is a RoR + Hotwire To-Do List project with basic CRUD operations. The main goal of this application is to understand how Hotwire front-end frameworks (it’s a suite of different frameworks) works. This application also represents traditional web architecture (server-rendered HTML), without the complexity of modern JavaScript frameworks like React.
+This is a RoR + Hotwire To-Do List project with basic CRUD operations. The main goal of this application is to understand how Hotwire front-end frameworks (a suite of different frameworks) works. This application also represents traditional web architecture (server-rendered HTML), without the complexity of modern JavaScript frameworks like React.
 
 
 ## Live Demo
